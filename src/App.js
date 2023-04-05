@@ -49,7 +49,7 @@ function App() {
   return (
     <div className='App'>
       <br></br>
-      <h1 id='headerStyle'>$$$ STEAM DEAL TRACKER $$$
+      <h1 id='headerStyle'>cats4life
       </h1>
       {errorMsg && <h3>{errorMsg}</h3>}
       {open ? 
