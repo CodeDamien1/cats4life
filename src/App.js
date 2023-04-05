@@ -69,7 +69,9 @@ function App() {
     <div className='App'>
       <div id='titleContainer'>
       <br></br>
-      <h1 id='headerStyle'>ฅ(＾・ω・＾ฅ) - Catshop! - ฅ(＾・ω・＾ฅ)
+
+      <h1 id='headerStyle'>cats4life
+
       </h1>
       <button id='buttonStyling' className='buttonStyleRemove' disabled={open} onClick={() => handleCartClick()}>
         <img id='cartImg' src={require('./images/cart.png')}></img>
