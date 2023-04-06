@@ -7,9 +7,10 @@ function App() {
     const [allCharacters, setAllCharacters] = useState([]);
     const [errorMsg, setErrorMsg] = useState(null);
     const [catURL, setCatURL] = useState(null);
-    const [open, setOpen] = useState(false)
-    const [cart, setCart] = useState([])
-    const [openCart, setOpenCart] = useState(false)
+    const [open, setOpen] = useState(false);
+    const [cart, setCart] = useState([]);
+    const [openCart, setOpenCart] = useState(false);
+    const [style, setStyle] = useState("buttonStyleRemove");
     useEffect(() => {
       const fetchData = async () => {
       try {
@@ -32,10 +33,11 @@ function App() {
   function handleClick (cat) {
     let catImage = cat.url
     setCatURL(catImage);
-    setOpen(!open);
+    setStyle("buttonStyleRemoveNoAnim")
     }
   function handleClose () {
     setOpen(!open);
+    setStyle("buttonStyleRemove")
   }
   function handleCartClick () {
 
@@ -124,7 +126,7 @@ function App() {
       {allCharacters.map((cat, index) => {
         return (
           <div>
-            <button id='buttonStyling' className='buttonStyleRemove' disabled={openCart} onClick={() => handleClick(cat)}>
+            <button id='buttonStyling' className={style} disabled={openCart} onClick={() => handleClick(cat)}>
               <img id='catImg' key={index} src = {cat.url}></img>
               
             </button>
