@@ -33,7 +33,8 @@ function App() {
   function handleClick (cat) {
     let catImage = cat.url
     setCatURL(catImage);
-    setStyle("buttonStyleRemoveNoAnim")
+    setStyle("buttonStyleRemoveNoAnim");
+    setOpen(!open);
     }
   function handleClose () {
     setOpen(!open);
