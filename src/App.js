@@ -97,23 +97,27 @@ function App() {
 
       {/* cart window */}
       {openCart ? 
-      <div id='popUpBox'>
+        <div id='popUpBox'>
         {cart.map((catUrl, index) => {
           return (
-            <div>
-            <img id='catImg' src = {catUrl}></img>
-            <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleRemove(index)}>
-            <h1 id='headerStyle'>REMOVE</h1>
-            </button>
+            <div className="checkoutCatImages">
+              <div><img className='checkoutCatImg' src = {catUrl}></img></div>
+              <div>
+                <button className='checkoutRemove' onClick={() => handleRemove(index)}>
+                remove
+                </button>
+              </div>
             </div>
           )
         })}
-        <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleCartClick()}>
-          <h1 id='headerStyle'>❌</h1>
+
+
+        <button className='checkoutLeave' onClick={() => handleCartClick()}>
+          ❌
         </button>
-        <div id='headerStyle'>
-          <button id='buttonStyling' className='buttonStyleRemove2' onClick={() => handleFinal()}>
-            <h1 id='headerStyle2'>Proceed to Checkout</h1>
+        <div className='checkoutHolder'>
+          <button className='checkoutProceed' onClick={() => handleFinal()}>
+            Proceed to Checkout
           </button>
         </div>
       </div>
