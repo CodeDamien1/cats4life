@@ -73,9 +73,22 @@
   margin-left: -70%;
 }
 
+
+#catInfo {
+  margin-top: 10%;
+  font-size: 4vh;
+
 #saleText {
   margin-top: 3%;
   font-size: 3em;
   font-weight: bolder;
+
   color: rgb(224, 71, 32);
+  text-align:left;
+}
+
+#catText {
+  font-size: 4vh;
+  font-style:italic;
+  color: white;
 }
