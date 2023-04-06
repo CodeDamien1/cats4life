@@ -59,10 +59,7 @@ function App() {
     <div className='App'>
       <div id='titleContainer'>
       <br></br>
-
-      <h1 id='headerStyle'>cats4life
-
-      </h1>
+      <img src={require('./images/catLogo.png')}></img>
       <button id='buttonStyling' className='buttonStyleRemove' disabled={open} onClick={() => handleCartClick()}>
         <img id='cartImg' src="https://cdn-icons-png.flaticon.com/512/3721/3721818.png"></img>
       </button>
