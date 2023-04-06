@@ -76,7 +76,7 @@ function App() {
         <div id='saleText'>Maybe put price here?</div>
         <div>
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
-            <h1 id='headerStyle'>CLOSE</h1>
+            <h1 id='headerStyle'>❌</h1>
           </button>
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleBuy(catURL)}>
             <h1 id='headerStyle'>BUY</h1>
