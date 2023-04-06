@@ -114,7 +114,7 @@ function App() {
         </button>
         <div id='headerStyle'>
           <button id='buttonStyling' className='buttonStyleRemove2' onClick={() => handleFinal()}>
-            <h1 id='headerStyle'>Proceed to Checkout</h1>
+            <h1 id='headerStyle2'>Proceed to Checkout</h1>
           </button>
         </div>
       </div>
