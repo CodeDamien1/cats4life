@@ -60,10 +60,7 @@ function App() {
     <div className='App'>
       <div id='titleContainer'>
       <br></br>
-
-      <h1 id='headerStyle'>cats4life
-
-      </h1>
+      <img src={require('./images/catLogo.png')}></img>
       <button id='buttonStyling' className='buttonStyleRemove' disabled={open} onClick={() => handleCartClick()}>
         <img id='cartImg' src="https://cdn-icons-png.flaticon.com/512/3721/3721818.png"></img>
       </button>
@@ -74,11 +71,16 @@ function App() {
       {open ?       
         <div id='popUpBox'>
         <div id='saleText'><img id='catImg2' src={catURL}></img></div>
+
         <div id='catInfo'>
           <div>Name: <span id="catText">{faker.name.firstName()}</span></div>
           <div>Location: <span id="catText">{faker.address.cityName()}</span></div>
           <div>Price: <span id="catText">{faker.finance.amount(50, 100, 0, '£')}</span></div>
         </div>
+
+        <div id='saleText'>{faker.finance.amount(50, 100, 0, '£')}
+        </div>
+
         <div>
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
             <h1 id='headerStyle'>❌</h1>
