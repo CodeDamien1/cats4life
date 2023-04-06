@@ -98,7 +98,7 @@ function App() {
 
       {/* cart window */}
       {openCart ? 
-      <div id='popUpBox' onClick={() => handleCartClick()}>
+      <div id='popUpBox'>
         {cart.map((catUrl, index) => {
           return (
             <div>
