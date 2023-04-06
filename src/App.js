@@ -78,9 +78,6 @@ function App() {
           <div>Price: <span id="catText">{faker.finance.amount(50, 100, 0, '£')}</span></div>
         </div>
 
-        <div id='saleText'>{faker.finance.amount(50, 100, 0, '£')}
-        </div>
-
         <div>
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
             <h1 id='headerStyle'>❌</h1>
