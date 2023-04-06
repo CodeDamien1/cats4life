@@ -83,12 +83,12 @@ function App() {
           <div>Price: <span id="catText">{faker.finance.amount(50, 100, 0, '£')}</span></div>
         </div>
 
-        <div>
-          <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
-            <h1 id='headerStyle'>❌</h1>
+        <div class="buttonsContainer">
+          <button className='buttonLeave' onClick={() => handleClose()}>
+            ❌
           </button>
-          <button id='buttonStyling2' className='buttonStyleRemove2' onClick={() => handleBuy(catURL)}>
-            <h1 id='headerStyle'>Add to Cart</h1>
+          <button className='buttonAdd' onClick={() => handleBuy(catURL)}>
+            Add to Cart
           </button>
 
         </div>
