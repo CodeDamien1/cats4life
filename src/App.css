@@ -223,6 +223,7 @@
   background-color: transparent;
   box-shadow:0px 0px 10px white;
   border-radius:5px;
+}
 
 footer {
   position: absolute;
@@ -232,6 +233,5 @@ footer {
   color: white;
   text-align: center;
   padding: 16px;
-
 
 }
