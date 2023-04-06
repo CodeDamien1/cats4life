@@ -134,9 +134,14 @@ function App() {
       })}
 
       </div>
-
     </div>
   );
 };
+
+
+var year = new Date().getFullYear();
+var date = `&copy; Created By: Damien Lewis, Joe Burns, Kim Wong, Andy Harper. ${year} All Rights Reserved.`;
+
+document.getElementsByTagName('footer')[0].innerHTML = date;
 
 export default App;
