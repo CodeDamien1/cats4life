@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import * as React from 'react';
+import { faker } from '@faker-js/faker';
 
 function App() {
     const [allCharacters, setAllCharacters] = useState([]);
@@ -73,7 +74,11 @@ function App() {
       {open ?       
         <div id='popUpBox'>
         <div id='saleText'><img id='catImg2' src={catURL}></img></div>
-        <div id='saleText'>Maybe put price here?</div>
+        <div id='catInfo'>
+          <div>Name: <span id="catText">{faker.name.firstName()}</span></div>
+          <div>Location: <span id="catText">{faker.address.cityName()}</span></div>
+          <div>Price: <span id="catText">{faker.finance.amount(50, 100, 0, '£')}</span></div>
+        </div>
         <div>
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
             <h1 id='headerStyle'>❌</h1>
