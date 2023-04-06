@@ -76,8 +76,8 @@ function App() {
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
             <h1 id='headerStyle'>❌</h1>
           </button>
-          <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleBuy(catURL)}>
-            <h1 id='headerStyle'>BUY</h1>
+          <button id='buttonStyling2' className='buttonStyleRemove2' onClick={() => handleBuy(catURL)}>
+            <h1 id='headerStyle'>Add to Cart</h1>
           </button>
 
         </div>
@@ -93,8 +93,8 @@ function App() {
           )
         })}
         <div id='headerStyle'>
-          <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleFinal()}>
-            <h1 id='headerStyle'>Finalise purchase?</h1>
+          <button id='buttonStyling' className='buttonStyleRemove2' onClick={() => handleFinal()}>
+            <h1 id='headerStyle'>Proceed to Checkout</h1>
           </button>
         </div>
       </div>
