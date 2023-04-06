@@ -56,6 +56,12 @@ function App() {
     }, "5000");
     
     }
+  function handleRemove (index) {
+  let catURLarray = cart;
+  let catURLarraySliced = catURLarray.slice(0, index).concat(catURLarray.slice(index+1))
+  setCart(catURLarraySliced)
+  }
+  
   return (
     <div className='App'>
       <div id='titleContainer'>
@@ -71,7 +77,13 @@ function App() {
       {open ?       
         <div id='popUpBox'>
         <div id='saleText'><img id='catImg2' src={catURL}></img></div>
-        <div id='saleText'>{faker.finance.amount(50, 100, 0, '£')}</div>
+
+        <div id='catInfo'>
+          <div>Name: <span id="catText">{faker.name.firstName()}</span></div>
+          <div>Location: <span id="catText">{faker.address.cityName()}</span></div>
+          <div>Price: <span id="catText">{faker.finance.amount(50, 100, 0, '£')}</span></div>
+        </div>
+
         <div>
           <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleClose()}>
             <h1 id='headerStyle'>❌</h1>
@@ -87,11 +99,19 @@ function App() {
       {/* cart window */}
       {openCart ? 
       <div id='popUpBox' onClick={() => handleCartClick()}>
-        {cart.map(catUrl => {
+        {cart.map((catUrl, index) => {
           return (
+            <div>
             <img id='catImg' src = {catUrl}></img>
+            <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleRemove(index)}>
+            <h1 id='headerStyle'>REMOVE</h1>
+            </button>
+            </div>
           )
         })}
+        <button id='buttonStyling' className='buttonStyleRemove' onClick={() => handleCartClick()}>
+          <h1 id='headerStyle'>❌</h1>
+        </button>
         <div id='headerStyle'>
           <button id='buttonStyling' className='buttonStyleRemove2' onClick={() => handleFinal()}>
             <h1 id='headerStyle'>Proceed to Checkout</h1>
