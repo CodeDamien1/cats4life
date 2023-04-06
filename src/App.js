@@ -1,7 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import * as React from 'react';
-import cart from "./images/cart.png"
 
 function App() {
     const [allCharacters, setAllCharacters] = useState([]);
@@ -74,7 +73,7 @@ function App() {
 
       </h1>
       <button id='buttonStyling' className='buttonStyleRemove' disabled={open} onClick={() => handleCartClick()}>
-        <img id='cartImg' src={require('./images/cart.png')}></img>
+        <img id='cartImg' src="https://cdn-icons-png.flaticon.com/512/3721/3721818.png"></img>
       </button>
       </div>
       {errorMsg && <h3>{errorMsg}</h3>}
