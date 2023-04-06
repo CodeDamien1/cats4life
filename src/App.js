@@ -13,21 +13,12 @@ function App() {
       const fetchData = async () => {
       try {
         let response0 = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
-        let response1 = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
-        let response2 = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
+
         if (!response0.ok) {
           throw new Error(response0.statusText);
         }
-        if (!response1.ok) {
-          throw new Error(response1.statusText);
-        }
-        if (!response2.ok) {
-          throw new Error(response2.statusText);
-        }
       const data1 = await response0.json();
-      const data2 = await response1.json();
-      const data3 = await response2.json();
-      const data = data1.concat(data2, data3)
+      const data = data1.concat();
       setAllCharacters(data);
 
       } catch (err) {
