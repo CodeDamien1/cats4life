@@ -31,7 +31,6 @@ function App() {
     }, [])
   function handleClick (cat) {
     let catImage = cat.url
-    let catBreeds = cat.breeds
     setCatURL(catImage);
     setOpen(!open);
     }
